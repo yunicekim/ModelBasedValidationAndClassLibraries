@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YKPatients", "YKPatients\YKPatients.csproj", "{D89F00E1-D9D7-4A6D-9D93-DA7AB01CECE2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YKClassLibrary", "YKClassLibrary\YKClassLibrary.csproj", "{2945F59A-17A6-4EAF-9F7D-6EF71C15A19D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D89F00E1-D9D7-4A6D-9D93-DA7AB01CECE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D89F00E1-D9D7-4A6D-9D93-DA7AB01CECE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D89F00E1-D9D7-4A6D-9D93-DA7AB01CECE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D89F00E1-D9D7-4A6D-9D93-DA7AB01CECE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2945F59A-17A6-4EAF-9F7D-6EF71C15A19D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2945F59A-17A6-4EAF-9F7D-6EF71C15A19D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2945F59A-17A6-4EAF-9F7D-6EF71C15A19D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2945F59A-17A6-4EAF-9F7D-6EF71C15A19D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0318246A-130D-44A9-A99C-754BC7607DA0}
+	EndGlobalSection
+EndGlobal

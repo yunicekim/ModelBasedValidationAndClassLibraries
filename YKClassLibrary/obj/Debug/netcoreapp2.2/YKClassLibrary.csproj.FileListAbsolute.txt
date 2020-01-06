@@ -1,0 +1,8 @@
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\bin\Debug\netcoreapp2.2\YKClassLibrary.deps.json
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\bin\Debug\netcoreapp2.2\YKClassLibrary.dll
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\bin\Debug\netcoreapp2.2\YKClassLibrary.pdb
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\obj\Debug\netcoreapp2.2\YKClassLibrary.AssemblyInfoInputs.cache
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\obj\Debug\netcoreapp2.2\YKClassLibrary.AssemblyInfo.cs
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\obj\Debug\netcoreapp2.2\YKClassLibrary.dll
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\obj\Debug\netcoreapp2.2\YKClassLibrary.pdb
+C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\obj\Debug\netcoreapp2.2\YKClassLibrary.csprojAssemblyReference.cache

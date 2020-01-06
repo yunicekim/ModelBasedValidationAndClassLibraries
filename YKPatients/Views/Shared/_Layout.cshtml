@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - YKPatients</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container">
+                <li style="list-style-type:none;">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/images/doctorGown.jpg" width="140px" height="100px" /></a>
+                </li>
+                <li style="list-style-type:none;">
+                    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Conestoga <br />Clinic</a>
+                </li>
+                <li style="list-style-type:none;">
+                    <a class="pl-4 text-dark" asp-area="" asp-controller="YKCountries" asp-action="Index">Countries</a>
+                </li>
+                @*<a class="pl-4 text-dark" asp-area="" asp-controller="YKConcentrationUnits" asp-action="Index">Concentrations</a>
+        <a class="pl-4 text-dark" asp-area="" asp-controller="YKDiagnosisCategories" asp-action="Index">Diagnosis Categories</a>
+        <a class="pl-4 text-dark" asp-area="" asp-controller="YKDispensingUnits" asp-action="Index">Dispensing Units</a>*@
+                @*<a class="pl-4 text-dark" asp-area="" asp-controller="YKMedicationTypes" asp-action="Index">Medications</a>*@
+                @*<a class="pl-4 text-dark" asp-area="" asp-controller="YKPatientDiagnosis" asp-action="Index">Patient Diagnosis</a>*@
+                <li style="list-style-type:none;">
+                    <a class="pl-4 text-dark" asp-area="" asp-controller="YKPatient" asp-action="Index">Patients</a>
+                </li>
+                <li style="list-style-type:none;">
+                    <a class="pl-4 text-dark" asp-area="" asp-controller="YKPatient" asp-action="Index">Table Maintenance</a>
+                </li>
+                @* show User/Role Maintenance menu only if user is in administrators role *@
+                @if (User.IsInRole("administrators"))
+                {
+                    <li style="list-style-type:none;" class="dropdown">
+                        <a class="dropdown-toggle nav-link text-dark" data-toggle="dropdown" href="#">
+                            Security<span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="text-dark" asp-controller="AspNetUsers" asp-action="Index">
+                                    User Maintenace
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-dark" asp-controller="YKRole" asp-action="Index">
+                                    Role Maintenance
+                                </a>
+                            </li>
+                            @*<li>
+                        <a class="text-dark" asp-controller="AspNetUsers" asp-action="ResetPassword">
+                            Reset User Password
+                        </a>
+                    </li>*@
+                        </ul>
+                    </li>
+                }
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            <span class="text-danger font-weight-bold">@TempData["message"]</span>
+            @*span style="color:red; font-weight:bold">@TempData["message"]</span>*@
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 <a href="mailto:ykim0406@conestogac.on.ca"> @@Yunice Kim</a> - Section 2
+            <a class="float-right pl-4 text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <a class="float-right pl-4 text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

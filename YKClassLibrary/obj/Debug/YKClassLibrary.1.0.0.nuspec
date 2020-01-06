@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>YKClassLibrary</id>
+    <version>1.0.0</version>
+    <authors>YKClassLibrary</authors>
+    <owners>YKClassLibrary</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp3.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\yunic\OneDrive\Documents\Study\School\Level 3\PROG2230-5 Programming-MS Web Tech\Assign\Assign4\YKPatients\YKClassLibrary\bin\Debug\netcoreapp3.0\YKClassLibrary.dll" target="lib\netcoreapp3.0\YKClassLibrary.dll" />
+  </files>
+</package>

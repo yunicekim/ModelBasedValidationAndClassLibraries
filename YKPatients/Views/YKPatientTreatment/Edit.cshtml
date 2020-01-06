@@ -1,0 +1,53 @@
+﻿@model YKPatients.Models.PatientTreatment
+
+@{
+    ViewData["Title"] = $"Edit treatment for {ViewData["diagnosisName"]}, Patient: {ViewData["lastName"]}, {ViewData["firstName"]}";
+}
+
+    <h1>@ViewData["Title"]</h1>
+
+<h4>PatientTreatment</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="PatientTreatmentId" />
+            <input type="hidden" asp-for="PatientDiagnosisId" value="@ViewData["patientDiagnosisId"]"/>
+            <div class="form-group">
+                <label asp-for="TreatmentId" class="control-label"></label>
+                <select asp-for="TreatmentId" class="form-control" asp-items="ViewBag.TreatmentId"></select>
+                <span asp-validation-for="TreatmentId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatePrescribed" class="control-label"></label><br/>
+                @Html.TextBoxFor(m => m.DatePrescribed, new { @readonly = "readonly", @style="width: 350px" })
+                @*<input asp-for="DatePrescribed" class="form-control" />*@
+                <span asp-validation-for="DatePrescribed" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Comments" class="control-label"></label><br/>
+                @Html.TextAreaFor(m => m.Comments, new { @rows = "3", @style="width: 350px; height: 100px" })
+                @*<textarea asp-for="Comments" class="form-control" rows="3"/>*@
+                @*<input asp-for="Comments" class="form-control" />*@
+                <span asp-validation-for="Comments" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+            <label asp-for="PatientDiagnosisId" class="control-label"></label>
+            <select asp-for="PatientDiagnosisId" class="form-control" asp-items="ViewBag.PatientDiagnosisId"></select>
+            <span asp-validation-for="PatientDiagnosisId" class="text-danger"></span>
+        </div>*@
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
